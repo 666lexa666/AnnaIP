@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Я у себя одна!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Я у себя одна! Как забыть абьюзера и стать счастливой</h1>
+  </header>
+
+  <main>
+    <section class="description">
+      <p>
+        Я помогу тебе освободиться от токсичных отношений, вернуть уверенность и снова почувствовать вкус к жизни.
+        Мой путь — это путь женщины, которая выбрала себя.
+        Вместе мы восстановим твою внутреннюю силу и создадим основу для счастливого будущего.
+      </p>
+    </section>
+
+    <section class="form-section">
+      <label>
+        <input type="checkbox" id="agree">
+        Я принимаю 
+        <a href="#" class="doc-link" data-doc="offer">оферту</a>, 
+        <a href="#" class="doc-link" data-doc="privacy">политику конфиденциальности</a> 
+        и даю <a href="#" class="doc-link" data-doc="consent">согласие на обработку персональных данных</a>.
+      </label>
+      <button id="consultBtn" disabled>Получить консультацию</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-section">
+      <h4>Документы</h4>
+      <ul>
+        <li><a href="#" class="doc-link" data-doc="offer">Договор оферты</a></li>
+        <li><a href="#" class="doc-link" data-doc="privacy">Политика конфиденциальности</a></li>
+        <li><a href="#" class="doc-link" data-doc="consent">Согласие на обработку персональных данных</a></li>
+        <li><a href="#" class="doc-link" data-doc="refund">Отказ от услуги</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Контакты</h4>
+      <p>Тел: +7 (900) 000-00-00</p>
+      <p>Email: example@mail.com</p>
+    </div>
+  </footer>
+
+  <!-- Модальное окно -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-title"></h2>
+      <div id="modal-text"></div>
+      <button id="download-pdf">Скачать PDF</button>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

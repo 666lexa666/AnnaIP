@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Консультация</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Консультация</h1>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <a href="https://t.me/ТВОЙ_НИК" target="_blank" class="btn">Связь со мной</a>
+    </section>
+
+    <section class="payment-section">
+      <p>Оплатить консультацию — <strong>25 рублей за 1 секунду общения</strong></p>
+      <div class="qr-container">
+        <div class="qr-placeholder">QR-код</div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <h2>Как это работает?</h2>
+      <ul>
+        <li>Разговор со мной</li>
+        <li>Тариф: 25 ₽ = 1 секунда</li>
+        <li>Оплата по QR-коду после разговора</li>
+      </ul>
+    </section>
+
+    <section class="reviews">
+      <h2>Отзывы</h2>
+      <div class="review-card">"После консультации я почувствовала облегчение и нашла силы двигаться дальше!" — Анна</div>
+      <div class="review-card">"Очень бережный и честный разговор. Спасибо за поддержку." — Мария</div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-section">
+      <h4>Документы</h4>
+      <ul>
+        <li><a href="#" class="doc-link" data-doc="offer">Договор оферты</a></li>
+        <li><a href="#" class="doc-link" data-doc="privacy">Политика конфиденциальности</a></li>
+        <li><a href="#" class="doc-link" data-doc="consent">Согласие на обработку персональных данных</a></li>
+        <li><a href="#" class="doc-link" data-doc="refund">Отказ от услуги</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Контакты</h4>
+      <p>Тел: +7 (900) 000-00-00</p>
+      <p>Email: example@mail.com</p>
+    </div>
+  </footer>
+
+  <!-- Модальное окно -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-title"></h2>
+      <div id="modal-text"></div>
+      <button id="download-pdf">Скачать PDF</button>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
