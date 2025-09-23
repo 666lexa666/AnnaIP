@@ -7,7 +7,7 @@ const ConsultationPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-8">
+    <div className="relative min-h-screen flex items-center justify-center px-4 py-8">
       <div className="max-w-4xl w-full">
         {/* Header */}
         <div className="text-center mb-12">
@@ -18,7 +18,7 @@ const ConsultationPage = () => {
             <ArrowLeft className="w-5 h-5 mr-2" />
             Вернуться на главную
           </button>
-          
+
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
             <span className="text-pink-600 font-serif italic">Консультация</span>
           </h1>
@@ -35,7 +35,7 @@ const ConsultationPage = () => {
               <MessageCircle className="w-6 h-6 text-pink-500 mr-3" />
               Связь со мной
             </h2>
-            
+
             <p className="text-gray-600 mb-6 leading-relaxed">
               Готова поддержать тебя на пути к внутренней свободе. Напиши мне, и мы начнём вместе.
             </p>
@@ -57,36 +57,38 @@ const ConsultationPage = () => {
               <QrCode className="w-6 h-6 text-yellow-500 mr-3" />
               Оплата консультации
             </h2>
-            
+
             <div className="mb-6">
               <p className="text-lg text-gray-700 mb-4">
                 Оплатить консультацию — <span className="font-semibold text-pink-600">25 рублей за 1 секунду общения</span>
               </p>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-500 mb-4">
                 Качественная поддержка стоит инвестиций в себя
               </p>
-              <div className="w-14 h-14">
-    <img
-      src="/images/mir.svg"
-      alt="Мир"
-      className="w-full h-full object-contain"
-    />
-  </div>
-  <div className="w-14 h-14">
-    <img
-      src="/images/sbp.svg"
-      alt="SBP"
-      className="w-full h-full object-contain"
-    />
-  </div>
-  <div className="w-14 h-14">
-    <img
-      src="/images/pay.svg"
-      alt="Paymaster"
-      className="w-full h-full object-contain"
-    />
-  </div>
-</div>
+
+              <div className="flex gap-4">
+                <div className="w-14 h-14">
+                  <img
+                    src="/images/mir.svg"
+                    alt="Мир"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="w-14 h-14">
+                  <img
+                    src="/images/sbp.svg"
+                    alt="SBP"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="w-14 h-14">
+                  <img
+                    src="/images/pay.svg"
+                    alt="Paymaster"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
             </div>
 
             {/* QR Code Container */}
@@ -115,7 +117,9 @@ const ConsultationPage = () => {
         {/* Decorative Elements */}
         <div className="absolute top-20 right-20 w-24 h-24 bg-pink-200/20 rounded-full blur-xl"></div>
         <div className="absolute bottom-20 left-20 w-32 h-32 bg-yellow-200/15 rounded-full blur-xl"></div>
-      <Footer />
+
+        {/* Footer */}
+        <Footer />
       </div>
     </div>
   );
