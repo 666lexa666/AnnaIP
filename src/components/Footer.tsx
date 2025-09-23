@@ -173,9 +173,8 @@ const documents = {
 6. КОНТАКТНАЯ ИНФОРМАЦИЯ
 
 Для оформления отказа от услуги обращайтесь:
-- Email: support@example.com
-- Telegram: @ТВОЙ_НИК
-- Телефон: +7 (900) 123-45-67`
+- Email: Annabellabelaia@gmail.com
+- Telegram: @Anna_k0uch`
   }
 };
 
@@ -236,15 +235,9 @@ const Footer = () => {
             </h3>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-pink-500" />
-                <a href="tel:+79001234567" className="text-gray-600 hover:text-pink-600 transition-colors text-sm">
-                  +7 (900) 123-45-67
-                </a>
-              </div>
-              <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-pink-500" />
-                <a href="mailto:support@example.com" className="text-gray-600 hover:text-pink-600 transition-colors text-sm">
-                  support@example.com
+                <a href="mailto:Annabellabelaia@gmail.com" className="text-gray-600 hover:text-pink-600 transition-colors text-sm">
+                  Annabellabelaia@gmail.com
                 </a>
               </div>
             </div>
