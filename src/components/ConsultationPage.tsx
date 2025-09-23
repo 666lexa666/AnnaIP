@@ -65,6 +65,28 @@ const ConsultationPage = () => {
               <p className="text-sm text-gray-500">
                 Качественная поддержка стоит инвестиций в себя
               </p>
+              <div className="w-14 h-14">
+    <img
+      src="/images/mir.svg"
+      alt="Мир"
+      className="w-full h-full object-contain"
+    />
+  </div>
+  <div className="w-14 h-14">
+    <img
+      src="/images/sbp.svg"
+      alt="SBP"
+      className="w-full h-full object-contain"
+    />
+  </div>
+  <div className="w-14 h-14">
+    <img
+      src="/images/pay.svg"
+      alt="Paymaster"
+      className="w-full h-full object-contain"
+    />
+  </div>
+</div>
             </div>
 
             {/* QR Code Container */}
