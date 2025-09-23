@@ -51,23 +51,6 @@ const DocumentModal: React.FC<DocumentModalProps> = ({ isOpen, onClose, title, c
             {content}
           </div>
         </div>
-        
-        {/* Footer */}
-        <div className="flex items-center justify-between p-6 border-t border-gray-200 bg-gray-50">
-          <button
-            onClick={onClose}
-            className="px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors"
-          >
-            Закрыть
-          </button>
-          <button
-            onClick={downloadPDF}
-            className="flex items-center px-6 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition-colors"
-          >
-            <Download className="w-4 h-4 mr-2" />
-            Скачать PDF
-          </button>
-        </div>
       </div>
     </div>
   );

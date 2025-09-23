@@ -41,7 +41,7 @@ const ConsultationPage = () => {
             </p>
 
             <a
-              href="https://t.me/ТВОЙ_НИК"
+              href="https://t.me/Anna_k0uch"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center w-full justify-center py-4 px-6 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:shadow-lg hover:scale-105 hover:from-blue-600 hover:to-blue-700"
