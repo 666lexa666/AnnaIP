@@ -7,16 +7,15 @@ const ConsultationPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center px-4 py-8 overflow-hidden">
-      {/* Фоновый div с изображением */}
-      <div
-        className="absolute inset-0 -z-10 bg-center bg-cover"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80')",
-        }}
-      >
-        {/* Полупрозрачный слой для размытия эффекта матового стекла */}
+    <div className="relative min-h-screen flex items-center justify-center px-4 py-8">
+      {/* Фоновая картинка */}
+      <div className="absolute inset-0 -z-10">
+        <img
+          src="https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80"
+          alt="Закат"
+          className="w-full h-full object-cover"
+        />
+        {/* Матовое стекло */}
         <div className="absolute inset-0 bg-white/30 backdrop-blur-3xl"></div>
       </div>
 
