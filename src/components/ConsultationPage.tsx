@@ -8,15 +8,15 @@ const ConsultationPage = () => {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center px-4 py-8 overflow-hidden">
-      {/* Фон с закатом */}
-      <div
-        className="absolute top-0 left-0 w-full h-72 bg-cover bg-center blur-sm opacity-70 -z-10"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80')",
-        }}
-      ></div>
-      <div className="absolute top-0 left-0 w-full h-72 bg-gradient-to-b from-white/80 to-transparent -z-10"></div>
+      {/* Фоновая картинка */}
+      <div className="absolute inset-0 -z-10">
+        <img
+          src="https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80"
+          alt="Закат"
+          className="w-full h-full object-cover opacity-70 blur-sm"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-white/40"></div>
+      </div>
 
       <div className="relative max-w-4xl w-full">
         {/* Header */}
@@ -41,19 +41,16 @@ const ConsultationPage = () => {
         <div className="grid md:grid-cols-2 gap-8 items-start">
           {/* Contact Section */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-pink-100 relative overflow-hidden">
-            {/* Декор в углу */}
-            <div className="absolute -top-6 -right-6 w-24 h-24 bg-pink-200/30 rounded-full blur-2xl"></div>
-
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center relative z-10">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
               <MessageCircle className="w-6 h-6 text-pink-500 mr-3" />
               Связь со мной
             </h2>
 
-            <div className="flex items-center gap-4 mb-6 relative z-10">
+            <div className="flex items-center gap-4 mb-6">
               <img
-                src="https://images.unsplash.com/photo-1502720705749-3c92562f5151?auto=format&fit=crop&w=200&q=80"
-                alt="Поддержка"
-                className="w-16 h-16 rounded-full object-cover border-2 border-pink-200"
+                src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=200&q=80"
+                alt="Аватар"
+                className="w-16 h-16 rounded-full object-cover border-2 border-pink-200 shadow-md"
               />
               <p className="text-gray-600 leading-relaxed text-sm">
                 Готова поддержать тебя на пути к внутренней свободе. Напиши мне, и мы начнём вместе 💌
@@ -64,7 +61,7 @@ const ConsultationPage = () => {
               href="https://t.me/Anna_k0uch"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center w-full justify-center py-4 px-6 bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:shadow-lg hover:scale-105 hover:from-pink-600 hover:to-rose-600 relative z-10"
+              className="inline-flex items-center w-full justify-center py-4 px-6 bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:shadow-lg hover:scale-105"
             >
               <MessageCircle className="w-5 h-5 mr-3" />
               Написать в Telegram
@@ -90,39 +87,17 @@ const ConsultationPage = () => {
               </p>
 
               <div className="flex gap-4">
-                <div className="w-14 h-14">
-                  <img
-                    src="/images/mir.svg"
-                    alt="Мир"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <div className="w-14 h-14">
-                  <img
-                    src="/images/sbp.svg"
-                    alt="SBP"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <div className="w-14 h-14">
-                  <img
-                    src="/images/pay.svg"
-                    alt="Paymaster"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
+                <img src="/images/mir.svg" alt="Мир" className="w-14 h-14 object-contain" />
+                <img src="/images/sbp.svg" alt="SBP" className="w-14 h-14 object-contain" />
+                <img src="/images/pay.svg" alt="Paymaster" className="w-14 h-14 object-contain" />
               </div>
             </div>
 
             {/* QR Code Container */}
             <div className="bg-gray-50 border-2 border-dashed border-gray-300 rounded-xl p-8 text-center">
               <QrCode className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-              <p className="text-gray-500 font-medium">
-                Место для QR-кода оплаты
-              </p>
-              <p className="text-sm text-gray-400 mt-2">
-                Вставьте сюда ваш QR-код для оплаты
-              </p>
+              <p className="text-gray-500 font-medium">Место для QR-кода оплаты</p>
+              <p className="text-sm text-gray-400 mt-2">Вставьте сюда ваш QR-код для оплаты</p>
             </div>
           </div>
         </div>
@@ -137,10 +112,6 @@ const ConsultationPage = () => {
             </p>
           </div>
         </div>
-
-        {/* Decorative Elements */}
-        <div className="absolute top-20 right-20 w-24 h-24 bg-pink-200/20 rounded-full blur-xl"></div>
-        <div className="absolute bottom-20 left-20 w-32 h-32 bg-yellow-200/15 rounded-full blur-xl"></div>
 
         {/* Footer */}
         <Footer />
