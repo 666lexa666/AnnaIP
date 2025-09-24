@@ -23,7 +23,13 @@ const HomePage = () => {
             <Heart className="w-8 h-8 text-pink-400 mr-3" />
             <Sparkles className="w-6 h-6 text-yellow-400" />
           </div>
-          
+
+          <img 
+            src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1200&q=80" 
+            alt="Женщина улыбается" 
+            className="rounded-2xl shadow-lg mx-auto mb-8 max-h-80 object-cover"
+          />
+
           <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-8 leading-tight">
             <span className="block text-pink-600 font-serif italic text-3xl md:text-4xl mb-2">
               Я у себя одна!
@@ -42,6 +48,11 @@ const HomePage = () => {
           {/* Description */}
           <div className="space-y-6">
             <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-pink-100">
+              <img 
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80" 
+                alt="Поддержка и свобода" 
+                className="rounded-xl mb-6 w-full object-cover max-h-64"
+              />
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p className="text-lg">
                   Я помогу тебе освободиться от токсичных отношений, вернуть уверенность в себе и снова почувствовать вкус к жизни.
@@ -64,7 +75,13 @@ const HomePage = () => {
             <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
               Получить поддержку
             </h2>
-            
+
+            <img 
+              src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=80" 
+              alt="Консультация" 
+              className="rounded-xl mb-6 w-full object-cover max-h-56"
+            />
+
             <p className="text-gray-600 mb-6 text-center">
               Чтобы получить консультацию, подтвердите своё согласие
             </p>
@@ -157,9 +174,11 @@ const HomePage = () => {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-100">
               <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-pink-200 rounded-full flex items-center justify-center">
-                  <span className="text-pink-700 font-semibold">А</span>
-                </div>
+                <img 
+                  src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=200&q=80" 
+                  alt="Анна" 
+                  className="w-10 h-10 rounded-full object-cover"
+                />
                 <div className="ml-3">
                   <p className="font-semibold text-gray-800">Анна</p>
                   <div className="flex text-yellow-400">
@@ -174,9 +193,11 @@ const HomePage = () => {
             
             <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-100">
               <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-rose-200 rounded-full flex items-center justify-center">
-                  <span className="text-rose-700 font-semibold">М</span>
-                </div>
+                <img 
+                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" 
+                  alt="Мария" 
+                  className="w-10 h-10 rounded-full object-cover"
+                />
                 <div className="ml-3">
                   <p className="font-semibold text-gray-800">Мария</p>
                   <div className="flex text-yellow-400">
@@ -191,9 +212,11 @@ const HomePage = () => {
             
             <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-100">
               <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-orange-200 rounded-full flex items-center justify-center">
-                  <span className="text-orange-700 font-semibold">Е</span>
-                </div>
+                <img 
+                  src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=200&q=80" 
+                  alt="Елена" 
+                  className="w-10 h-10 rounded-full object-cover"
+                />
                 <div className="ml-3">
                   <p className="font-semibold text-gray-800">Елена</p>
                   <div className="flex text-yellow-400">
