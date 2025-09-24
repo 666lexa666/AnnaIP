@@ -28,18 +28,24 @@ const ConsultationPage = () => {
           </p>
         </div>
 
-        {/* Блок с фоновой картинкой и эффектом "матового стекла" */}
+        {/* Фоновая картинка с эффектом "матового стекла" и плавным слиянием */}
         <div className="relative w-full h-80 md:h-96 mb-12 rounded-2xl overflow-hidden shadow-lg">
+          {/* Background Image */}
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80')",
+              backgroundImage:
+                "url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80')",
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
           ></div>
+
           {/* Overlay для эффекта матового стекла */}
           <div className="absolute inset-0 bg-white/30 backdrop-blur-3xl"></div>
+
+          {/* Плавное слияние с фоном снизу через градиент */}
+          <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-gray-50/100 via-gray-50/50 to-transparent"></div>
         </div>
 
         {/* Main Content */}
