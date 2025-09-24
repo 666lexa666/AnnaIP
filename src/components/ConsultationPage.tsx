@@ -8,14 +8,16 @@ const ConsultationPage = () => {
 
   return (
     <div
-      className="relative min-h-screen flex items-center justify-center px-4 py-8 overflow-hidden bg-cover bg-center"
+      className="relative min-h-screen flex items-center justify-center px-4 py-8 overflow-hidden"
       style={{
         backgroundImage:
           "url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
       }}
     >
-      {/* Слой для размытия и мягкого затемнения */}
-      <div className="absolute inset-0 bg-white/80 backdrop-blur-2xl -z-10"></div>
+      {/* Матовое стекло поверх фона */}
+      <div className="absolute inset-0 bg-white/30 backdrop-blur-3xl -z-10"></div>
 
       <div className="relative max-w-4xl w-full">
         {/* Header */}
@@ -39,7 +41,7 @@ const ConsultationPage = () => {
         {/* Main Content */}
         <div className="grid md:grid-cols-2 gap-8 items-start">
           {/* Contact Section */}
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-pink-100">
+          <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-pink-100">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
               <MessageCircle className="w-6 h-6 text-pink-500 mr-3" />
               Связь со мной
@@ -61,7 +63,7 @@ const ConsultationPage = () => {
           </div>
 
           {/* Payment Section */}
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-pink-100">
+          <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-pink-100">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
               <QrCode className="w-6 h-6 text-yellow-500 mr-3" />
               Оплата консультации
@@ -86,7 +88,7 @@ const ConsultationPage = () => {
             </div>
 
             {/* QR Code Container */}
-            <div className="bg-gray-50 border-2 border-dashed border-gray-300 rounded-xl p-8 text-center">
+            <div className="bg-gray-50/70 border-2 border-dashed border-gray-300 rounded-xl p-8 text-center backdrop-blur-sm">
               <QrCode className="w-16 h-16 text-gray-400 mx-auto mb-4" />
               <p className="text-gray-500 font-medium">Место для QR-кода оплаты</p>
               <p className="text-sm text-gray-400 mt-2">
@@ -98,7 +100,7 @@ const ConsultationPage = () => {
 
         {/* Additional Info */}
         <div className="mt-12 text-center">
-          <div className="bg-pink-50/80 backdrop-blur-sm rounded-2xl p-6 border border-pink-100 max-w-2xl mx-auto">
+          <div className="bg-pink-50/70 backdrop-blur-sm rounded-2xl p-6 border border-pink-100 max-w-2xl mx-auto">
             <p className="text-gray-700 leading-relaxed">
               <strong className="text-pink-700">Помни:</strong> каждый шаг к освобождению — это акт
               самолюбви. Ты достойна счастья, уважения и внутреннего покоя.
