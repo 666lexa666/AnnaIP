@@ -7,9 +7,9 @@ const ConsultationPage = () => {
   const navigate = useNavigate();
 
   return (
-    // Весь экран + футер покрыт фоном
+    // Весь контейнер тянется на всю высоту контента
     <div
-      className="relative w-full min-h-screen flex flex-col items-center justify-start px-4 py-8 overflow-hidden"
+      className="relative w-full min-h-full flex flex-col items-center justify-start px-4 py-8 overflow-hidden"
       style={{
         backgroundImage:
           "url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80')",
@@ -21,7 +21,7 @@ const ConsultationPage = () => {
       {/* Overlay для эффекта матового стекла */}
       <div className="absolute inset-0 bg-white/40 backdrop-blur-3xl"></div>
 
-      {/* Контент страницы */}
+      {/* Контент всей страницы */}
       <div className="relative z-10 w-full max-w-4xl flex flex-col">
 
         {/* Header */}
