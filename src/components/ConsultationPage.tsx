@@ -8,34 +8,33 @@ const ConsultationPage = () => {
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-start px-4 py-8 bg-gray-50 overflow-hidden">
-      {/* Фоновая картинка сверху с плавным слиянием */}
-      <div className="absolute top-0 left-0 w-full h-96 md:h-[500px] -z-10">
-        <img
-          src="https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80"
-          alt="Закат"
-          className="w-full h-full object-cover"
-        />
-        {/* Плавное затемнение и размытие, чтобы сливалось с фоном */}
-        <div className="absolute inset-0 bg-white/70 backdrop-blur-2xl"></div>
-      </div>
-
-      <div className="relative max-w-4xl w-full mt-64 md:mt-[450px]">
+      <div className="relative max-w-4xl w-full">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-6 relative z-10">
           <button
             onClick={() => navigate('/')}
-            className="inline-flex items-center text-gray-600 hover:text-pink-600 transition-colors mb-6"
+            className="inline-flex items-center text-gray-600 hover:text-pink-600 transition-colors mb-4"
           >
             <ArrowLeft className="w-5 h-5 mr-2" />
             Вернуться на главную
           </button>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-2">
             <span className="text-pink-600 font-serif italic">Консультация</span>
           </h1>
           <p className="text-xl text-gray-600">
             Ваш путь к освобождению начинается здесь
           </p>
+        </div>
+
+        {/* Фоновая картинка под заголовком */}
+        <div className="w-full h-64 md:h-80 relative mb-12 rounded-2xl overflow-hidden shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80"
+            alt="Закат"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-white/40 backdrop-blur-2xl"></div>
         </div>
 
         {/* Main Content */}
