@@ -9,6 +9,7 @@ const ConsultationPage = () => {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-start px-4 py-8 bg-gray-50 overflow-hidden">
       <div className="relative max-w-4xl w-full">
+
         {/* Header */}
         <div className="text-center mb-6 relative z-10">
           <button
@@ -27,23 +28,22 @@ const ConsultationPage = () => {
           </p>
         </div>
 
-        {/* Фоновая картинка под заголовком через background-image */}
-        <div
-          className="w-full h-64 md:h-80 relative mb-12 rounded-2xl overflow-hidden shadow-lg"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        >
-          {/* Полупрозрачный слой для эффекта матового стекла */}
-          <div className="absolute inset-0 bg-white/40 backdrop-blur-2xl"></div>
+        {/* Блок с фоновой картинкой и эффектом "матового стекла" */}
+        <div className="relative w-full h-80 md:h-96 mb-12 rounded-2xl overflow-hidden shadow-lg">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: "url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          ></div>
+          {/* Overlay для эффекта матового стекла */}
+          <div className="absolute inset-0 bg-white/30 backdrop-blur-3xl"></div>
         </div>
 
         {/* Main Content */}
         <div className="grid md:grid-cols-2 gap-8 items-start">
-          {/* Contact Section */}
           <div className="bg-white/80 rounded-2xl p-8 shadow-xl border border-pink-100 backdrop-blur-sm">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
               <MessageCircle className="w-6 h-6 text-pink-500 mr-3" />
@@ -65,7 +65,6 @@ const ConsultationPage = () => {
             </a>
           </div>
 
-          {/* Payment Section */}
           <div className="bg-white/80 rounded-2xl p-8 shadow-xl border border-pink-100 backdrop-blur-sm">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
               <QrCode className="w-6 h-6 text-yellow-500 mr-3" />
@@ -90,7 +89,6 @@ const ConsultationPage = () => {
               </div>
             </div>
 
-            {/* QR Code Container */}
             <div className="bg-gray-50/70 border-2 border-dashed border-gray-300 rounded-xl p-8 text-center backdrop-blur-sm">
               <QrCode className="w-16 h-16 text-gray-400 mx-auto mb-4" />
               <p className="text-gray-500 font-medium">Место для QR-кода оплаты</p>
@@ -111,7 +109,6 @@ const ConsultationPage = () => {
           </div>
         </div>
 
-        {/* Footer */}
         <Footer />
       </div>
     </div>
