@@ -7,54 +7,42 @@ const ConsultationPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-start px-4 py-8 bg-gray-50 overflow-hidden">
-      <div className="relative max-w-4xl w-full">
+    <div
+      className="relative min-h-screen flex flex-col items-center justify-start px-4 py-8 overflow-hidden"
+      style={{
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      {/* Overlay для эффекта матового стекла на фоне всей страницы */}
+      <div className="absolute inset-0 bg-white/40 backdrop-blur-3xl"></div>
 
-        {/* Секция с фоном и эффектом матового стекла */}
-        <div
-          className="relative w-full rounded-2xl overflow-hidden shadow-lg mb-12"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        >
-          {/* Overlay для эффекта матового стекла */}
-          <div className="absolute inset-0 bg-white/40 backdrop-blur-3xl"></div>
+      {/* Контент страницы */}
+      <div className="relative w-full max-w-4xl z-10">
 
-          {/* Контент секции */}
-          <div className="relative z-10 px-6 py-16 text-center">
-            <button
-              onClick={() => navigate('/')}
-              className="inline-flex items-center text-gray-600 hover:text-pink-600 transition-colors mb-4"
-            >
-              <ArrowLeft className="w-5 h-5 mr-2" />
-              Вернуться на главную
-            </button>
+        {/* Header */}
+        <div className="text-center mb-12">
+          <button
+            onClick={() => navigate('/')}
+            className="inline-flex items-center text-gray-600 hover:text-pink-600 transition-colors mb-4"
+          >
+            <ArrowLeft className="w-5 h-5 mr-2" />
+            Вернуться на главную
+          </button>
 
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-2">
-              <span className="text-pink-600 font-serif italic">Консультация</span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Ваш путь к освобождению начинается здесь
-            </p>
-
-            {/* Кнопка связи */}
-            <a
-              href="https://t.me/Anna_k0uch"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center py-4 px-6 bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:shadow-lg hover:scale-105"
-            >
-              <MessageCircle className="w-5 h-5 mr-3" />
-              Написать в Telegram
-            </a>
-          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-2">
+            <span className="text-pink-600 font-serif italic">Консультация</span>
+          </h1>
+          <p className="text-xl text-gray-600 mb-12">
+            Ваш путь к освобождению начинается здесь
+          </p>
         </div>
 
-        {/* Основной контент страницы */}
+        {/* Main Content */}
         <div className="grid md:grid-cols-2 gap-8 items-start">
+          {/* Связь */}
           <div className="bg-white/80 rounded-2xl p-8 shadow-xl border border-pink-100 backdrop-blur-sm">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
               <MessageCircle className="w-6 h-6 text-pink-500 mr-3" />
@@ -76,6 +64,7 @@ const ConsultationPage = () => {
             </a>
           </div>
 
+          {/* Оплата */}
           <div className="bg-white/80 rounded-2xl p-8 shadow-xl border border-pink-100 backdrop-blur-sm">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
               <QrCode className="w-6 h-6 text-yellow-500 mr-3" />
