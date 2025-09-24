@@ -27,13 +27,17 @@ const ConsultationPage = () => {
           </p>
         </div>
 
-        {/* Фоновая картинка под заголовком */}
-        <div className="w-full h-64 md:h-80 relative mb-12 rounded-2xl overflow-hidden shadow-lg">
-          <img
-            src="https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80"
-            alt="Закат"
-            className="w-full h-full object-cover"
-          />
+        {/* Фоновая картинка под заголовком через background-image */}
+        <div
+          className="w-full h-64 md:h-80 relative mb-12 rounded-2xl overflow-hidden shadow-lg"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          {/* Полупрозрачный слой для эффекта матового стекла */}
           <div className="absolute inset-0 bg-white/40 backdrop-blur-2xl"></div>
         </div>
 
