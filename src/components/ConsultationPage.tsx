@@ -7,6 +7,7 @@ const ConsultationPage = () => {
   const navigate = useNavigate();
 
   return (
+    // Внешний контейнер с фоном на всю высоту страницы
     <div
       className="relative min-h-screen flex flex-col items-center justify-start px-4 py-8 overflow-hidden"
       style={{
@@ -19,8 +20,8 @@ const ConsultationPage = () => {
       {/* Overlay для эффекта матового стекла на фоне всей страницы */}
       <div className="absolute inset-0 bg-white/40 backdrop-blur-3xl"></div>
 
-      {/* Контент страницы */}
-      <div className="relative w-full max-w-4xl z-10 flex flex-col">
+      {/* Контент всей страницы */}
+      <div className="relative z-10 w-full max-w-4xl flex flex-col">
 
         {/* Header */}
         <div className="text-center mb-12">
@@ -110,7 +111,9 @@ const ConsultationPage = () => {
         </div>
 
         {/* Футер */}
-        <Footer />
+        <div className="w-full">
+          <Footer />
+        </div>
       </div>
     </div>
   );
