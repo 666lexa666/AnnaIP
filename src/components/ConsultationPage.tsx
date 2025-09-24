@@ -7,17 +7,13 @@ const ConsultationPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div
-      className="relative min-h-screen flex items-center justify-center px-4 py-8 overflow-hidden"
-      style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      {/* Матовое стекло поверх фона */}
-      <div className="absolute inset-0 bg-white/30 backdrop-blur-3xl -z-10"></div>
+    <div className="relative min-h-screen flex items-center justify-center px-4 py-8 overflow-hidden">
+      {/* Фоновое изображение с фильтром */}
+      <img
+        src="https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80"
+        alt="Закат"
+        className="absolute inset-0 w-full h-full object-cover filter blur-3xl brightness-50 -z-10"
+      />
 
       <div className="relative max-w-4xl w-full">
         {/* Header */}
@@ -41,7 +37,7 @@ const ConsultationPage = () => {
         {/* Main Content */}
         <div className="grid md:grid-cols-2 gap-8 items-start">
           {/* Contact Section */}
-          <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-pink-100">
+          <div className="bg-white/70 rounded-2xl p-8 shadow-xl border border-pink-100 backdrop-blur-sm">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
               <MessageCircle className="w-6 h-6 text-pink-500 mr-3" />
               Связь со мной
@@ -63,7 +59,7 @@ const ConsultationPage = () => {
           </div>
 
           {/* Payment Section */}
-          <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-pink-100">
+          <div className="bg-white/70 rounded-2xl p-8 shadow-xl border border-pink-100 backdrop-blur-sm">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
               <QrCode className="w-6 h-6 text-yellow-500 mr-3" />
               Оплата консультации
