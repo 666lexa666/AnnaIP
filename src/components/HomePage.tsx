@@ -24,10 +24,11 @@ const HomePage = () => {
             <Sparkles className="w-6 h-6 text-yellow-400" />
           </div>
 
+          {/* Фоновая картинка вместо портрета */}
           <img 
-            src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1200&q=80" 
-            alt="Женщина улыбается" 
-            className="rounded-2xl shadow-lg mx-auto mb-8 max-h-80 object-cover"
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80" 
+            alt="Абстрактный фон" 
+            className="rounded-2xl shadow-lg mx-auto mb-8 max-h-80 w-full object-cover"
           />
 
           <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-8 leading-tight">
