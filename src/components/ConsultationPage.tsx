@@ -7,19 +7,19 @@ const ConsultationPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center px-4 py-8">
-      {/* Фоновая картинка */}
-      <div className="absolute inset-0 -z-10">
+    <div className="relative min-h-screen flex flex-col items-center justify-start px-4 py-8 bg-gray-50 overflow-hidden">
+      {/* Фоновая картинка сверху с плавным слиянием */}
+      <div className="absolute top-0 left-0 w-full h-96 md:h-[500px] -z-10">
         <img
           src="https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80"
           alt="Закат"
           className="w-full h-full object-cover"
         />
-        {/* Матовое стекло */}
-        <div className="absolute inset-0 bg-white/30 backdrop-blur-3xl"></div>
+        {/* Плавное затемнение и размытие, чтобы сливалось с фоном */}
+        <div className="absolute inset-0 bg-white/70 backdrop-blur-2xl"></div>
       </div>
 
-      <div className="relative max-w-4xl w-full">
+      <div className="relative max-w-4xl w-full mt-64 md:mt-[450px]">
         {/* Header */}
         <div className="text-center mb-12">
           <button
@@ -41,7 +41,7 @@ const ConsultationPage = () => {
         {/* Main Content */}
         <div className="grid md:grid-cols-2 gap-8 items-start">
           {/* Contact Section */}
-          <div className="bg-white/70 rounded-2xl p-8 shadow-xl border border-pink-100 backdrop-blur-sm">
+          <div className="bg-white/80 rounded-2xl p-8 shadow-xl border border-pink-100 backdrop-blur-sm">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
               <MessageCircle className="w-6 h-6 text-pink-500 mr-3" />
               Связь со мной
@@ -63,7 +63,7 @@ const ConsultationPage = () => {
           </div>
 
           {/* Payment Section */}
-          <div className="bg-white/70 rounded-2xl p-8 shadow-xl border border-pink-100 backdrop-blur-sm">
+          <div className="bg-white/80 rounded-2xl p-8 shadow-xl border border-pink-100 backdrop-blur-sm">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
               <QrCode className="w-6 h-6 text-yellow-500 mr-3" />
               Оплата консультации
@@ -100,7 +100,7 @@ const ConsultationPage = () => {
 
         {/* Additional Info */}
         <div className="mt-12 text-center">
-          <div className="bg-pink-50/70 backdrop-blur-sm rounded-2xl p-6 border border-pink-100 max-w-2xl mx-auto">
+          <div className="bg-pink-50/80 backdrop-blur-sm rounded-2xl p-6 border border-pink-100 max-w-2xl mx-auto">
             <p className="text-gray-700 leading-relaxed">
               <strong className="text-pink-700">Помни:</strong> каждый шаг к освобождению — это акт
               самолюбви. Ты достойна счастья, уважения и внутреннего покоя.
