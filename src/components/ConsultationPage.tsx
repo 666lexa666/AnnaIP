@@ -7,16 +7,15 @@ const ConsultationPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center px-4 py-8 overflow-hidden">
-      {/* Фоновая картинка */}
-      <div className="absolute inset-0 -z-10">
-        <img
-          src="https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80"
-          alt="Закат"
-          className="w-full h-full object-cover opacity-70 blur-sm"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-white/40"></div>
-      </div>
+    <div
+      className="relative min-h-screen flex items-center justify-center px-4 py-8 overflow-hidden bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80')",
+      }}
+    >
+      {/* Затемнение и размытие фона */}
+      <div className="absolute inset-0 bg-white/70 backdrop-blur-sm -z-10"></div>
 
       <div className="relative max-w-4xl w-full">
         {/* Header */}
@@ -40,22 +39,15 @@ const ConsultationPage = () => {
         {/* Main Content */}
         <div className="grid md:grid-cols-2 gap-8 items-start">
           {/* Contact Section */}
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-pink-100 relative overflow-hidden">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-pink-100">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
               <MessageCircle className="w-6 h-6 text-pink-500 mr-3" />
               Связь со мной
             </h2>
 
-            <div className="flex items-center gap-4 mb-6">
-              <img
-                src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=200&q=80"
-                alt="Аватар"
-                className="w-16 h-16 rounded-full object-cover border-2 border-pink-200 shadow-md"
-              />
-              <p className="text-gray-600 leading-relaxed text-sm">
-                Готова поддержать тебя на пути к внутренней свободе. Напиши мне, и мы начнём вместе 💌
-              </p>
-            </div>
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              Готова поддержать тебя на пути к внутренней свободе. Напиши мне, и мы начнём вместе 💌
+            </p>
 
             <a
               href="https://t.me/Anna_k0uch"
@@ -77,7 +69,7 @@ const ConsultationPage = () => {
 
             <div className="mb-6">
               <p className="text-lg text-gray-700 mb-4">
-                Оплатить консультацию —{" "}
+                Оплатить консультацию —{' '}
                 <span className="font-semibold text-pink-600">
                   25 рублей за 1 секунду общения
                 </span>
@@ -97,7 +89,9 @@ const ConsultationPage = () => {
             <div className="bg-gray-50 border-2 border-dashed border-gray-300 rounded-xl p-8 text-center">
               <QrCode className="w-16 h-16 text-gray-400 mx-auto mb-4" />
               <p className="text-gray-500 font-medium">Место для QR-кода оплаты</p>
-              <p className="text-sm text-gray-400 mt-2">Вставьте сюда ваш QR-код для оплаты</p>
+              <p className="text-sm text-gray-400 mt-2">
+                Вставьте сюда ваш QR-код для оплаты
+              </p>
             </div>
           </div>
         </div>
@@ -106,9 +100,8 @@ const ConsultationPage = () => {
         <div className="mt-12 text-center">
           <div className="bg-pink-50/80 backdrop-blur-sm rounded-2xl p-6 border border-pink-100 max-w-2xl mx-auto">
             <p className="text-gray-700 leading-relaxed">
-              <strong className="text-pink-700">Помни:</strong> каждый шаг к
-              освобождению — это акт самолюбви. Ты достойна счастья, уважения и
-              внутреннего покоя.
+              <strong className="text-pink-700">Помни:</strong> каждый шаг к освобождению — это акт
+              самолюбви. Ты достойна счастья, уважения и внутреннего покоя.
             </p>
           </div>
         </div>
