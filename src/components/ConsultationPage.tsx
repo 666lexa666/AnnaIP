@@ -7,20 +7,21 @@ const ConsultationPage = () => {
   const navigate = useNavigate();
 
   return (
-    // Внешний контейнер с фоном на всю высоту страницы
+    // Весь экран + футер покрыт фоном
     <div
-      className="relative min-h-screen flex flex-col items-center justify-start px-4 py-8 overflow-hidden"
+      className="relative w-full min-h-screen flex flex-col items-center justify-start px-4 py-8 overflow-hidden"
       style={{
         backgroundImage:
           "url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
       }}
     >
-      {/* Overlay для эффекта матового стекла на фоне всей страницы */}
+      {/* Overlay для эффекта матового стекла */}
       <div className="absolute inset-0 bg-white/40 backdrop-blur-3xl"></div>
 
-      {/* Контент всей страницы */}
+      {/* Контент страницы */}
       <div className="relative z-10 w-full max-w-4xl flex flex-col">
 
         {/* Header */}
@@ -111,9 +112,7 @@ const ConsultationPage = () => {
         </div>
 
         {/* Футер */}
-        <div className="w-full">
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </div>
   );
