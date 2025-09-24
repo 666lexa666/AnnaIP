@@ -14,8 +14,8 @@ const ConsultationPage = () => {
           "url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80')",
       }}
     >
-      {/* Затемнение и размытие фона */}
-      <div className="absolute inset-0 bg-white/70 backdrop-blur-sm -z-10"></div>
+      {/* Слой для размытия и мягкого затемнения */}
+      <div className="absolute inset-0 bg-white/80 backdrop-blur-2xl -z-10"></div>
 
       <div className="relative max-w-4xl w-full">
         {/* Header */}
