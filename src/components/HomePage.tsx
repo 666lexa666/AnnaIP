@@ -15,7 +15,15 @@ const HomePage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-8">
+    <div className="relative min-h-screen flex items-center justify-center px-4 py-8">
+      {/* Фоновая картинка с закатом */}
+      <div 
+        className="absolute inset-0 -z-10 bg-cover bg-center blur-sm opacity-70"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80')"
+        }}
+      ></div>
+
       <div className="max-w-4xl w-full">
         {/* Header Section */}
         <div className="text-center mb-12">
@@ -23,13 +31,6 @@ const HomePage = () => {
             <Heart className="w-8 h-8 text-pink-400 mr-3" />
             <Sparkles className="w-6 h-6 text-yellow-400" />
           </div>
-
-          {/* Фоновая картинка вместо портрета */}
-          <img 
-            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80" 
-            alt="Абстрактный фон" 
-            className="rounded-2xl shadow-lg mx-auto mb-8 max-h-80 w-full object-cover"
-          />
 
           <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-8 leading-tight">
             <span className="block text-pink-600 font-serif italic text-3xl md:text-4xl mb-2">
@@ -48,12 +49,7 @@ const HomePage = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Description */}
           <div className="space-y-6">
-            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-pink-100">
-              <img 
-                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80" 
-                alt="Поддержка и свобода" 
-                className="rounded-xl mb-6 w-full object-cover max-h-64"
-              />
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-pink-100">
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p className="text-lg">
                   Я помогу тебе освободиться от токсичных отношений, вернуть уверенность в себе и снова почувствовать вкус к жизни.
@@ -72,7 +68,7 @@ const HomePage = () => {
           </div>
 
           {/* Form Section */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-pink-100">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-pink-100">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
               Получить поддержку
             </h2>
@@ -127,7 +123,7 @@ const HomePage = () => {
             <span className="text-pink-600 font-serif italic">Как это работает?</span>
           </h2>
           
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-pink-100 max-w-3xl mx-auto">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-pink-100 max-w-3xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -173,7 +169,7 @@ const HomePage = () => {
           </h2>
           
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-100">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-100">
               <div className="flex items-center mb-4">
                 <img 
                   src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=200&q=80" 
@@ -192,7 +188,7 @@ const HomePage = () => {
               </p>
             </div>
             
-            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-100">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-100">
               <div className="flex items-center mb-4">
                 <img 
                   src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" 
@@ -211,7 +207,7 @@ const HomePage = () => {
               </p>
             </div>
             
-            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-100">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-100">
               <div className="flex items-center mb-4">
                 <img 
                   src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=200&q=80" 
