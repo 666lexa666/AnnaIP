@@ -8,12 +8,17 @@ const ConsultationPage = () => {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center px-4 py-8 overflow-hidden">
-      {/* Фоновое изображение с фильтром */}
-      <img
-        src="https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80"
-        alt="Закат"
-        className="absolute inset-0 w-full h-full object-cover filter blur-3xl brightness-50 -z-10"
-      />
+      {/* Фоновый div с изображением */}
+      <div
+        className="absolute inset-0 -z-10 bg-center bg-cover"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80')",
+        }}
+      >
+        {/* Полупрозрачный слой для размытия эффекта матового стекла */}
+        <div className="absolute inset-0 bg-white/30 backdrop-blur-3xl"></div>
+      </div>
 
       <div className="relative max-w-4xl w-full">
         {/* Header */}
