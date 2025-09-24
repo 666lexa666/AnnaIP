@@ -20,7 +20,7 @@ const ConsultationPage = () => {
       <div className="absolute inset-0 bg-white/40 backdrop-blur-3xl"></div>
 
       {/* Контент страницы */}
-      <div className="relative w-full max-w-4xl z-10">
+      <div className="relative w-full max-w-4xl z-10 flex flex-col">
 
         {/* Header */}
         <div className="text-center mb-12">
@@ -41,7 +41,7 @@ const ConsultationPage = () => {
         </div>
 
         {/* Main Content */}
-        <div className="grid md:grid-cols-2 gap-8 items-start">
+        <div className="grid md:grid-cols-2 gap-8 items-start mb-12">
           {/* Связь */}
           <div className="bg-white/80 rounded-2xl p-8 shadow-xl border border-pink-100 backdrop-blur-sm">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
@@ -100,7 +100,7 @@ const ConsultationPage = () => {
         </div>
 
         {/* Доп. информация */}
-        <div className="mt-12 text-center">
+        <div className="text-center mb-12">
           <div className="bg-pink-50/80 backdrop-blur-sm rounded-2xl p-6 border border-pink-100 max-w-2xl mx-auto">
             <p className="text-gray-700 leading-relaxed">
               <strong className="text-pink-700">Помни:</strong> каждый шаг к освобождению — это акт
@@ -109,6 +109,7 @@ const ConsultationPage = () => {
           </div>
         </div>
 
+        {/* Футер */}
         <Footer />
       </div>
     </div>
